@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD. Masum Talukder | Finance & Operations Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #102040;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f5f0e8;
+    --cream-dark: #ede6d5;
+    --slate: #8a9bb5;
+    --white: #ffffff;
+    --text-dark: #1a2540;
+    --text-muted: #6b7a96;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10, 22, 40, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(245,240,232,0.75);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cream);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 80% at 20% 80%, rgba(16,32,64,0.8) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 120px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    color: var(--slate);
+    margin: 1.25rem 0 2rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-summary {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(245,240,232,0.65);
+    max-width: 560px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-1px);
+  }
+
+  .hero-photo-wrap {
+    position: relative;
+    animation: fadeIn 1s 0.5s ease both;
+  }
+
+  .hero-photo-frame {
+    width: 240px;
+    height: 300px;
+    position: relative;
+  }
+
+  .hero-photo-frame::before {
+    content: '';
+    position: absolute;
+    top: 12px; left: 12px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    opacity: 0.4;
+  }
+
+  .hero-photo-frame img, .hero-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-photo-placeholder {
+    background: linear-gradient(135deg, #102040 0%, #1a3060 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .hero-photo-placeholder .initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  .stat-item { text-align: left; }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--slate);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 5%; }
+
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    background: var(--cream-dark);
+    border-top: 1px solid rgba(10,22,40,0.08);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text p strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .objective-box {
+    background: var(--navy);
+    padding: 2rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--gold);
+    margin-top: 1.5rem;
+  }
+
+  .objective-box p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(245,240,232,0.85);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .skill-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1rem;
+    background: white;
+    border: 1px solid rgba(10,22,40,0.08);
+    border-radius: 3px;
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .skill-chip:hover {
+    border-color: var(--gold);
+    transform: translateX(3px);
+  }
+
+  .skill-chip::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 0.45rem;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--white); }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold) 0%, rgba(201,168,76,0.1) 100%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.45rem;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .job-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .job-company {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-top: 0.2rem;
+    letter-spacing: 0.04em;
+  }
+
+  .job-period {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: var(--cream-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+  }
+
+  .job-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-top: 0.75rem;
+  }
+
+  .job-bullets li {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .job-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.75rem;
+  }
+
+  .job-highlight {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3060 100%);
+    padding: 1.25rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .job-highlight .metric {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .job-highlight .metric-text {
+    font-size: 0.83rem;
+    color: rgba(245,240,232,0.7);
+    line-height: 1.4;
+  }
+
+  /* ── EXPERTISE ── */
+  #expertise {
+    background: var(--navy);
+  }
+
+  #expertise .section-title {
+    color: var(--cream);
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .expertise-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+    padding: 1.75rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .expertise-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .expertise-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-3px);
+  }
+
+  .expertise-card:hover::after {
+    transform: scaleX(1);
+  }
+
+  .expertise-icon {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .expertise-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 0.6rem;
+  }
+
+  .expertise-desc {
+    font-size: 0.82rem;
+    color: var(--slate);
+    line-height: 1.65;
+  }
+
+  /* ── EDUCATION ── */
+  #education { background: var(--cream); }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .edu-card {
+    background: white;
+    border: 1px solid rgba(10,22,40,0.08);
+    border-radius: 4px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .edu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+  }
+
+  .edu-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(10,22,40,0.1);
+  }
+
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .edu-institution {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .edu-year {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    margin-top: 0.75rem;
+  }
+
+  .training-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .training-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.25rem;
+    background: white;
+    border: 1px solid rgba(10,22,40,0.07);
+    border-radius: 4px;
+    font-size: 0.87rem;
+    color: var(--text-dark);
+    transition: all 0.2s;
+  }
+
+  .training-item:hover {
+    border-color: var(--gold);
+    transform: translateX(4px);
+  }
+
+  .training-year {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--navy);
+    text-align: center;
+  }
+
+  #contact .section-label { justify-content: center; }
+  #contact .section-label::before { display: none; }
+
+  #contact .section-title { color: var(--cream); }
+
+  .contact-sub {
+    font-size: 0.95rem;
+    color: var(--slate);
+    max-width: 480px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+  }
+
+  .contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 180px;
+    text-decoration: none;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  .contact-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-card-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 0.35rem;
+  }
+
+  .contact-card-value {
+    font-size: 0.88rem;
+    color: var(--cream);
+    font-weight: 500;
+    word-break: break-all;
+  }
+
+  .footer-line {
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding-top: 2rem;
+    font-size: 0.78rem;
+    color: var(--slate);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: rgba(10,22,40,0.98);
+    padding: 1.5rem 5%;
+    z-index: 999;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    color: rgba(245,240,232,0.8);
+    text-decoration: none;
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero-eyebrow { justify-content: center; }
+    .hero-summary { margin: 0 auto; }
+    .hero-cta { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-photo-wrap { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 4rem 5%; }
+    .hero-stats { flex-direction: column; gap: 1.25rem; }
+    .stat-item { display: flex; align-items: center; gap: 1rem; }
+    .contact-cards { flex-direction: column; align-items: center; }
+    .contact-card { width: 100%; max-width: 300px; }
+    .job-header { flex-direction: column; }
+    .job-period { align-self: flex-start; }
+  }
+
+  /* Products sector tag */
+  .products-band {
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .products-band-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .products-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .product-tag {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: white;
+    border: 1px solid rgba(10,22,40,0.08);
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-brand">MT</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#expertise" onclick="closeMenu()">Expertise</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-content container">
+    <div>
+      <div class="hero-eyebrow">Finance & Operations Leader</div>
+      <h1 class="hero-name">MD. <em>Masum</em><br>Talukder</h1>
+      <p class="hero-title">Sr. Manager – Accounts, Finance & Operations · Arkan Group BD</p>
+      <p class="hero-summary">Dynamic and result-driven finance leader with 16+ years of progressive experience in strategic financial management, cost management, sales operations, and cross-functional leadership across diverse industries.</p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn-primary">View Experience</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">16+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">14</div>
+          <div class="stat-label">Team Members Led</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">৳40Cr</div>
+          <div class="stat-label">RMC Sales Built</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <div class="hero-photo-placeholder">
+          <div class="initials">MT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">A Leader Who Drives <em>Real Results</em></h2>
+        <p>Currently serving as <strong>Sr. Manager – Accounts, Finance & Operations at Arkan Group</strong>, leading a 14-member Accounts & Finance team while also heading Sales & Operations at its sister concern, Ahyan Ready-mix Concrete Ltd.</p>
+        <p>Proven ability to lead business transformation by overseeing finance, sales, HR, supply chain, and administration. Known for delivering measurable results through data-driven strategies, effective cost control, regulatory compliance, and high-impact decision-making.</p>
+        <div class="objective-box">
+          <p>"To obtain a leadership role such as AGM/DGM where I can apply my diverse finance and operational expertise to drive sustainable business growth, lead cross-functional teams, and contribute to strategic planning and organizational excellence."</p>
+        </div>
+
+        <div class="products-band" style="margin-top:2rem;">
+          <div class="products-band-label">Industries & Products Expertise</div>
+          <div class="products-tags">
+            <span class="product-tag">PVC/HDPE Pipes</span>
+            <span class="product-tag">PPR & CPVC</span>
+            <span class="product-tag">PVC Doors & Sheets</span>
+            <span class="product-tag">Water Tanks</span>
+            <span class="product-tag">Home Appliances</span>
+            <span class="product-tag">Adhesive Chemicals</span>
+            <span class="product-tag">Bicycles</span>
+            <span class="product-tag">Tyre & Tube</span>
+            <span class="product-tag">FMCG</span>
+            <span class="product-tag">Furniture</span>
+            <span class="product-tag">Plywood</span>
+            <span class="product-tag">Bulk Trading</span>
+            <span class="product-tag">Construction</span>
+            <span class="product-tag">Ready-Mix Concrete</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="section-label">Key Proficiencies</div>
+        <h2 class="section-title">Core <em>Skills</em></h2>
+        <div class="skills-grid">
+          <div class="skill-chip">Financial Analysis</div>
+          <div class="skill-chip">Budget Development</div>
+          <div class="skill-chip">Cost Management</div>
+          <div class="skill-chip">Banking Operations</div>
+          <div class="skill-chip">Financial Restructuring</div>
+          <div class="skill-chip">Investment Management</div>
+          <div class="skill-chip">Sales Leadership</div>
+          <div class="skill-chip">Market Analysis</div>
+          <div class="skill-chip">Project Finance</div>
+          <div class="skill-chip">Inventory Control</div>
+          <div class="skill-chip">VAT & Tax Compliance</div>
+          <div class="skill-chip">Variance Analysis</div>
+        </div>
+        <div style="margin-top:2rem;">
+          <div class="section-label" style="margin-bottom:1rem;">Soft Skills</div>
+          <div class="skills-grid">
+            <div class="skill-chip">Teamwork</div>
+            <div class="skill-chip">Leadership</div>
+            <div class="skill-chip">Negotiation</div>
+            <div class="skill-chip">Communication</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label reveal">Career Journey</div>
+    <h2 class="section-title reveal">Professional <em>Experience</em></h2>
+
+    <div class="timeline" style="margin-top:3rem;">
+
+      <!-- Job 1 -->
+      <div class="timeline-item reveal">
+        <div class="job-header">
+          <div>
+            <div class="job-role">Head of Accounts, Finance (Sr. Manager)</div>
+            <div class="job-company">Arkan Group BD</div>
+          </div>
+          <div class="job-period">Jan 2021 – Present</div>
+        </div>
+        <ul class="job-bullets">
+          <li>Lead finance, budgeting, costing, compliance, and operational functions for diversified business operations.</li>
+          <li>Manage a 12-member finance team and oversee financial planning, budgeting, reporting, and cost governance activities.</li>
+          <li>Lead annual budgets, rolling forecasts, and financial performance monitoring aligned with business objectives.</li>
+          <li>Develop and monitor CAPEX and OPEX budgets to ensure efficient resource allocation and cost discipline.</li>
+          <li>Conduct detailed variance analysis (budget vs actual) and provide strategic recommendations to senior management.</li>
+          <li>Supervise product-based costing for bicycles, food products, atta & moyda, trading items, construction projects, and ready-mix concrete.</li>
+          <li>Manage banking operations, loan negotiations, LC activities, and financial restructuring initiatives.</li>
+          <li>Oversee VAT & Tax functions, ensuring full compliance, return submissions (9.1, 6.3 & Withholding Tax), audit handling, and tax planning.</li>
+        </ul>
+        <div class="job-highlight">
+          <div class="metric">৳40Cr</div>
+          <div class="metric-text">Led Ready-Mix Concrete business from zero to BDT 40 crore annual sales through strategic leadership and operations excellence.</div>
+        </div>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="timeline-item reveal" style="transition-delay:0.1s">
+        <div class="job-header">
+          <div>
+            <div class="job-role">Head of Cost & Budget (Deputy Manager)</div>
+            <div class="job-company">Navana Engineering Limited</div>
+          </div>
+          <div class="job-period">Mar 2017 – Nov 2020</div>
+        </div>
+        <ul class="job-bullets">
+          <li>Spearheaded product-based costing, margin analysis & profitability management for PVC, HDPE, PPR & CPVC Pipes & Fittings, plastic furniture, gas stoves, sinks, pumps, and ready-mix concrete.</li>
+          <li>Led budget planning, forecasting & financial control; conducted Project Feasibility analysis aligned with organizational targets.</li>
+          <li>Strengthened cost control systems & standard costing, reducing wastage and improving efficiency.</li>
+          <li>Monitored inventory (slow & non-moving items) and optimized working capital management.</li>
+          <li>Delivered MIS, financial reports & variance analysis (monthly, quarterly, annual) for management.</li>
+        </ul>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="timeline-item reveal" style="transition-delay:0.2s">
+        <div class="job-header">
+          <div>
+            <div class="job-role">Deputy Manager, Accounts and Finance</div>
+            <div class="job-company">PRAN-RFL GROUP</div>
+          </div>
+          <div class="job-period">Oct 2014 – Mar 2017</div>
+        </div>
+        <ul class="job-bullets">
+          <li>Supported product-based costing & profitability analysis for PVC & HDPE Pipes & Fittings, water tanks, and bicycles.</li>
+          <li>Managed budgeting & budgetary control & Project Feasibility analysis ensuring alignment with financial targets.</li>
+          <li>Conducted variance analysis (budget vs actual) and reported insights to management.</li>
+          <li>Prepared financial statements, ensured tax compliance & conducted inventory audits.</li>
+        </ul>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="timeline-item reveal" style="transition-delay:0.3s">
+        <div class="job-header">
+          <div>
+            <div class="job-role">Assistant Manager, Cost Management</div>
+            <div class="job-company">PARTEX STAR GROUP</div>
+          </div>
+          <div class="job-period">Jan 2012 – Oct 2014</div>
+        </div>
+        <ul class="job-bullets">
+          <li>Executed product-based costing & investment appraisal for PVC Doors & Sheets, adhesive chemicals, furniture, plywood, and particle board.</li>
+          <li>Prepared budgeting, variance analysis (budget vs actual), and production reports to track performance and optimize costs.</li>
+          <li>Ensured inventory reconciliation & production reporting accuracy across manufacturing units.</li>
+        </ul>
+      </div>
+
+      <!-- Job 5 -->
+      <div class="timeline-item reveal" style="transition-delay:0.4s">
+        <div class="job-header">
+          <div>
+            <div class="job-role">Assistant Manager, Accounts and Finance</div>
+            <div class="job-company">PRAN-RFL GROUP</div>
+          </div>
+          <div class="job-period">Sep 2009 – Dec 2012</div>
+        </div>
+        <ul class="job-bullets">
+          <li>Supported product-based costing, profitability analysis & pricing strategies for PVC Pipes & Fittings, PVC Doors & Sheets, water tanks, adhesive chemicals, gas stoves, sinks, and pumps.</li>
+          <li>Managed project costing, variance analysis (budget vs actual) to optimize resource allocation and control costs.</li>
+          <li>Ensured inventory reconciliation & production reporting accuracy across manufacturing units.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE CARDS -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-label reveal">What I Bring</div>
+    <h2 class="section-title reveal">Areas of <em>Expertise</em></h2>
+    <div class="expertise-grid">
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">📊</div>
+        <div class="expertise-title">Strategic Financial Management</div>
+        <div class="expertise-desc">Annual budgets, rolling forecasts, financial performance monitoring, CAPEX/OPEX planning, and variance analysis with actionable recommendations.</div>
+      </div>
+      <div class="expertise-card reveal" style="transition-delay:0.08s">
+        <div class="expertise-icon">💰</div>
+        <div class="expertise-title">Cost Optimization</div>
+        <div class="expertise-desc">Product-based costing, standard costing, margin analysis, and profitability management across manufacturing, trading, and construction sectors.</div>
+      </div>
+      <div class="expertise-card reveal" style="transition-delay:0.16s">
+        <div class="expertise-icon">🏦</div>
+        <div class="expertise-title">Banking & Finance Operations</div>
+        <div class="expertise-desc">Loan negotiations, LC activities, financial restructuring, and working capital optimization to ensure healthy cash flow and liquidity.</div>
+      </div>
+      <div class="expertise-card reveal" style="transition-delay:0.24s">
+        <div class="expertise-icon">📋</div>
+        <div class="expertise-title">Compliance & Taxation</div>
+        <div class="expertise-desc">Full VAT & Tax compliance, return submissions (9.1, 6.3 & Withholding Tax), audit coordination, and liaison with regulatory authorities.</div>
+      </div>
+      <div class="expertise-card reveal" style="transition-delay:0.32s">
+        <div class="expertise-icon">🚀</div>
+        <div class="expertise-title">Sales & Operations Leadership</div>
+        <div class="expertise-desc">Cross-functional leadership spanning HR, supply chain, procurement, and administration. Built Ready-Mix business from zero to ৳40 crore annual sales.</div>
+      </div>
+      <div class="expertise-card reveal" style="transition-delay:0.4s">
+        <div class="expertise-icon">📦</div>
+        <div class="expertise-title">Inventory & Supply Chain</div>
+        <div class="expertise-desc">Inventory reconciliation, slow/non-moving item management, working capital efficiency, and production reporting accuracy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-label reveal">Qualifications</div>
+    <h2 class="section-title reveal">Education & <em>Training</em></h2>
+
+    <div class="edu-grid reveal" style="transition-delay:0.1s">
+      <div class="edu-card">
+        <div class="edu-degree">MBS in Accounting</div>
+        <div class="edu-institution">National University</div>
+        <div class="edu-year">1st Class · 2009</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">B.Com in Accounting</div>
+        <div class="edu-institution">National University</div>
+        <div class="edu-year">2nd Class · 2007</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">HSC – Business Studies</div>
+        <div class="edu-institution">Siraj Uddin Memorial College, Morrelgonj</div>
+        <div class="edu-year">1st Division · 2001</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">SSC – Business Studies</div>
+        <div class="edu-institution">Rofiz Srity Secondary School</div>
+        <div class="edu-year">1st Division · 1999</div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem;" class="reveal" style="transition-delay:0.2s">
+      <div class="section-label">Professional Development</div>
+      <h3 class="section-title" style="font-size:1.75rem; margin-top:0.5rem;">Certifications & <em>Trainings</em></h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">Pursuing <strong>Chartered Management Accountant (CMA)</strong>, ICMAB</p>
+      <div class="training-list">
+        <div class="training-item">
+          <span class="training-year">2025</span>
+          AI for Professionals — Chartered Technical Training Institute
+        </div>
+        <div class="training-item">
+          <span class="training-year">2025</span>
+          Emerging Leadership — Keeron Ltd
+        </div>
+        <div class="training-item">
+          <span class="training-year">2025</span>
+          FMCG Sales Excellence — Keeron Ltd
+        </div>
+        <div class="training-item">
+          <span class="training-year">2025</span>
+          Territory Sales Management — Keeron Ltd
+        </div>
+        <div class="training-item">
+          <span class="training-year">2024</span>
+          Fundamentals of Export-Import via Letter of Credit — VATCONS BD
+        </div>
+        <div class="training-item">
+          <span class="training-year">2023</span>
+          Income Tax Administration (7-day workshop) — VATCONS BD
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title" style="margin-bottom:1rem;">Let's <em>Connect</em></h2>
+    <p class="contact-sub">Open to leadership opportunities (AGM/DGM level) where finance and operational expertise can drive sustainable growth and organizational excellence.</p>
+
+    <div class="contact-cards">
+      <a href="tel:+8801717882621" class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-label">Mobile (WhatsApp)</div>
+        <div class="contact-card-value">+88 01717-882621</div>
+      </a>
+      <a href="tel:+8801321934506" class="contact-card">
+        <div class="contact-card-icon">📱</div>
+        <div class="contact-card-label">Alt. (WhatsApp)</div>
+        <div class="contact-card-value">+88 01321-934506</div>
+      </a>
+      <a href="mailto:tmd.masum@gmail.com" class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-label">Email</div>
+        <div class="contact-card-value">tmd.masum@gmail.com</div>
+      </a>
+      <a href="https://www.linkedin.com/in/md-masum-talukder-17935473" target="_blank" class="contact-card">
+        <div class="contact-card-icon">💼</div>
+        <div class="contact-card-label">LinkedIn</div>
+        <div class="contact-card-value">View Profile</div>
+      </a>
+    </div>
+
+    <div class="footer-line">
+      <p>📍 9no Ward, Baikali, Khulna-9000, Bangladesh</p>
+      <p style="margin-top:0.5rem;">© 2025 MD. Masum Talukder — All rights reserved</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') mobileMenu.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Nav active highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current
+        ? 'var(--gold)' : '';
+    });
+  });
+</script>
+</body>
+</html>
